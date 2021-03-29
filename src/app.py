@@ -26,7 +26,7 @@ def add_new_todo():
 #Delete
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
-    todos.pop(1) #Número de posición para eliminar 
+    todos.pop(position) #Número de posición para eliminar 
     print("This is the position to delete: ",position)
     return jsonify(todos)
 
